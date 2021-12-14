@@ -51,17 +51,19 @@
 
 Para o correto funcionamento do trackpad basta seguir os passos:
 
-Remover as seguintes Kexts [de OC > Kexts]:
-VoodooI2C
-VoodooI2CHID
+1. Remover as seguintes Kexts [de OC > Kexts]:
+- VoodooI2C
+- VoodooI2CHID
 [deixar somente a kext "VoodooPS2Controller"]
-Com o python atualizado para qualquer versão 3.X (recomendado), abrir o config.plist com o ProperTree e:
-Fazer um OC Clean Snapshot (caso apareça algum aviso basta clicar em Sim)
-Fazer um OC Snapshot
-Salvar o config.plist
-Realizar a limpeza da NVRAM (recomendo fazer pela ferramenta do próprio OC, no boot [Tools: Clean NVRAM.efi])
 
-Reiniciar a máquina
+2. Com o python atualizado para qualquer versão 3.X (recomendado), abrir o config.plist com o ProperTree e:
+- Fazer um OC Clean Snapshot (caso apareça algum aviso basta clicar em Sim)
+- Fazer um OC Snapshot
+- Salvar o config.plist
+
+3. Realizar a limpeza da NVRAM (recomendo fazer pela ferramenta do próprio OC, no boot [Tools: Clean NVRAM.efi])
+
+4. Reiniciar a máquina
 
 ![image](https://user-images.githubusercontent.com/28004053/146005801-23bbcc92-4a3b-4b80-93b1-4b22aea9c641.png)
 
@@ -72,6 +74,6 @@ Reiniciar a máquina
 -  ** Agradecimentos especiais ** a [Acidanthera](https://github.com/acidanthera) pela maioria dos Kexts.
 - Graças a [OpenCore Bootloader](https://github.com/acidanthera/OpenCorePkg).
 - Agradecimentos a [daliansky](https://github.com/daliansky) por [ACPI Hotpatch Samples for the OpenCore Bootloader](https://github.com/daliansky/OC-little).
-- Agradecimentos a [alexandred] (https://github.com/alexandred) por [VoodooI2C](https://github.com/alexandred/VoodooI2C).
-- Agradecimentos a [hackintosh-stuff] (https://github.com/hackintosh-stuff) para [ComboJack support for ALC255](https://github.com/hackintosh-stuff/ComboJack).
+- Agradecimentos a [alexandred](https://github.com/alexandred) por [VoodooI2C](https://github.com/alexandred/VoodooI2C).
+- Agradecimentos a [hackintosh-stuff](https://github.com/hackintosh-stuff) para [ComboJack support for ALC255](https://github.com/hackintosh-stuff/ComboJack).
 - Agradecimentos a [corpnewt](https://github.com/corpnewt) para [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
