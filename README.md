@@ -1,21 +1,28 @@
-#  2AM E550 - Big Sur
+#  2AM E550 - Monterey/Ventura
 
 ####  Screenshot
-![screenshot](https://user-images.githubusercontent.com/28004053/139112858-a3c80404-befd-46b4-8823-974e9f3c2fcc.png)
 
+![screenshot](screenshot.jpeg)
 
-##  Meu Sistema
+## Meu Sistema
 - Processador: Intel® Core ™ i5 9400 Coffee Lake
-- Ram: 24GB DDR4
+- Ram: 32GB DDR4
 - Chipset: H370
 - Gráfico: Intel® UHD Graphics 630 e Nvidia GeForce® GTX 1050 3GB
-- Armazenamento: 256GB M.2 Nvme (Windows) / 480GB SSD Sata (MacOS) / 1TB Nvme SATA (Arquivos)
+- Armazenamento: 1TB M.2 Nvme (Windows/MacOS) / 1TB SSD Sata (Games) / 1TB Nvme SATA (Arquivos)
 - Rede e Bluetooth: Intel(R) Wireless-AC 9462
 - Áudio: Realtek ALC269
 - Touchpad: Synaptics SMBus TouchPad
 - BIOS: American Megatrends Inc 1.07.08X (16/08/2019)
 
+## Informações Importantes
+- Open Core na versão 0.8.5
+- Essa EFI funciona nas versões do MacOS Monterey 12.3.1 à 12.6
+- No Ventura foi instalado a versão Beta 9, e nada foi instalado nem atualizado ou seja, é funcional para instalação, porém não asseguro que esteja 100% funcional, ou seja, pode ser necessário modificações.
+ - Tem adicionado porém desabilitado a kext de Wi-fi genérico, caso a Kext atual não funcione com o MacOS Ventura.
+ - Junto com a Kext genérica, também envio o Heliport para conseguir usar o Wi-fi (no MacOS Ventura, caso a Kext atual não funcione).
 ##  BIOS
+
 - Desabilite o Boot via Rede.
 - Habilite VT-X
 - Defina o modo SATA para AHCI.
@@ -25,8 +32,7 @@
 
 ## DICAS
 - Eu não sou um profissional da parte de Hackintosh, então essas UEFIs são o resultado de muita pesquisa e umas modificações leves.
-- A EFI que está na pasta PENDRIVE-INTALAÇÃO ele serve para substituir a EFI do pendrive com a instalação do BigSur (baixe o RAW no site [olarila.com](https://www.olarila.com/topic/6278-hackintosh-olarila-vanilla-images/) e faça o pendrive com Rufus ou Balena Etcher)
-- Após a instalação no HD de boot você vai inserir a outra EFI que já tem as Kexts corretas para o funcionamento de tudo o que está descrito abaixo.
+- A EFI serve tanto para instalação quando para o boot no HD que já tem as Kexts corretas para o funcionamento de tudo o que está descrito abaixo.
 - Se você conheçe mais desse universo e conseguir melhorias faça a solicitação de Pull Request, será um prazer testar e adicionar melhorias.
 
 ##  O que está funcionando:
@@ -34,42 +40,20 @@
 - [x] HDMI (Essa é ligada ao chipset e não a GTX)
 - [x] Gerenciamento de bateria
 - [x] Leitor de Cartão
-- [x] Wi-fi e Bluetooth de forma nativa
+- [x] Wi-fi e Bluetooth
 - [x] Ethernet
 - [x] Sleep & Wake
 - [x] WebCam
 - [x] Usb 3.1 e Tipo C
-- [x] Suporte nativo de tecla de atalho com teclas Fn (exceto brilho)
-
+- [x] Suporte a tecla de atalho com teclas Fn (exceto brilho)
+- [x] Trackpad com Gestos
 ##  Não funciona:
 - Mini Display Port devido a ligação com a GTX 1050
 - Nvidia GeForce® GTX 1050
-- Trackpad/TouchPad a kext do Voodoo causa travamento na inicialização
 - Alteração das Luzes do teclado.
-
-## Fix para Trackpad
-
-Para o correto funcionamento do trackpad basta seguir os passos:
-
-1. Remover as seguintes Kexts [de OC > Kexts]:
-- VoodooI2C
-- VoodooI2CHID
-[deixar somente a kext "VoodooPS2Controller"]
-
-2. Com o python atualizado para qualquer versão 3.X (recomendado), abrir o config.plist com o ProperTree e:
-- Fazer um OC Clean Snapshot (caso apareça algum aviso basta clicar em Sim)
-- Fazer um OC Snapshot
-- Salvar o config.plist
-
-3. Realizar a limpeza da NVRAM (recomendo fazer pela ferramenta do próprio OC, no boot [Tools: Clean NVRAM.efi])
-
-4. Reiniciar a máquina
-
-![image](https://user-images.githubusercontent.com/28004053/146005801-23bbcc92-4a3b-4b80-93b1-4b22aea9c641.png)
-
+- Airdrop
 
 ##  Créditos
-- Agradecimento a [atosfull](https://github.com/atosfull) pela correção do Trackpad.
 -  ** Agradecimentos especiais ** a [dortania](https://dortania.github.io/vanilla-laptop-guide) pelo guia do laptop vanilla.
 -  ** Agradecimentos especiais ** a [Acidanthera](https://github.com/acidanthera) pela maioria dos Kexts.
 - Graças a [OpenCore Bootloader](https://github.com/acidanthera/OpenCorePkg).
@@ -77,3 +61,6 @@ Para o correto funcionamento do trackpad basta seguir os passos:
 - Agradecimentos a [alexandred](https://github.com/alexandred) por [VoodooI2C](https://github.com/alexandred/VoodooI2C).
 - Agradecimentos a [hackintosh-stuff](https://github.com/hackintosh-stuff) para [ComboJack support for ALC255](https://github.com/hackintosh-stuff/ComboJack).
 - Agradecimentos a [corpnewt](https://github.com/corpnewt) para [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
+- Agradecimentos a [OpenIntelWireless](https://github.com/OpenIntelWireless) para [HeliPort](https://github.com/OpenIntelWireless/HeliPort/releases).
+- Para suporte da comunidade, acesse o discord [Universo Hackintosh](https://discord.gg/yqPq3Rvw)
+- Agradecimentos a [Gabriel Luchina](https://github.com/luchina-gabriel) pelos repositórios de EFIs Base.
