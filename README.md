@@ -21,6 +21,7 @@
 - No Ventura foi instalado a versão Beta 9, e nada foi instalado nem atualizado ou seja, é funcional para instalação, porém não asseguro que esteja 100% funcional, ou seja, pode ser necessário modificações.
  - Tem adicionado porém desabilitado a kext de Wi-fi genérico, caso a Kext atual não funcione com o MacOS Ventura.
  - Junto com a Kext genérica, também envio o Heliport para conseguir usar o Wi-fi (no MacOS Ventura, caso a Kext atual não funcione).
+ - Se por algum motivo precise instalar o Big Sur, basta mudar a branch para bigsur ou [click aqui](https://github.com/Brozinga/2am_E550_hackintosh/tree/bigsur).
 ##  BIOS
 
 - Desabilite o Boot via Rede.
